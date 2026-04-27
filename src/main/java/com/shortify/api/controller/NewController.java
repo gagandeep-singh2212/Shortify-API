@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
 
-@RestController("/new")
+@RestController
 public class NewController {
-    @GetMapping()
-    public ResponseEntity<Void> redirect() {
-
-        return ResponseEntity.status(HttpStatus.OK).build();
+    @GetMapping("/api/new")
+    public ResponseEntity<String> newMapping() {
+        return ResponseEntity.status(HttpStatus.OK).body("New COntroller");
     }
 }
