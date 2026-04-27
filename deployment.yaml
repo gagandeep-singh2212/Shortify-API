@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shortify-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shortify-service
+  template:
+    metadata:
+      labels:
+        app: shortify-service
+    spec:
+      containers:
+        - name: shortify-service
+          image: shortify-service:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
