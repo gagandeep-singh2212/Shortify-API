@@ -12,6 +12,6 @@ import java.net.URI;
 public class NewController {
     @GetMapping("/api/new")
     public ResponseEntity<String> newMapping() {
-        return ResponseEntity.status(HttpStatus.OK).body("New COntroller");
+        return ResponseEntity.status(HttpStatus.OK).body("New controller");
     }
 }
